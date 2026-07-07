@@ -1,17 +1,11 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        map<int,int>freq;
-        for(int i : nums)
-            freq[i]++;
-        for(auto pair:freq)
+        int a = 0 ;
+        for(int i = 0 ; i<nums.size() ; i++)
         {
-            int key =pair.first;
-            int val = pair.second;
-            if(val==1)return key; 
-
-        }return -1;
-            
-        
+            a=a^nums[i];
+        }
+        return a;
     }
 };
