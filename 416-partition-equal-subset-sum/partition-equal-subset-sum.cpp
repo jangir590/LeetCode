@@ -19,7 +19,7 @@ public:
         }
         if(totsum%2)return false;
         int target = totsum/2;
-        vector<vector<int>>dp(nums.size()+1,vector<int>(target+1,-1));
+        vector<vector<int>>dp(nums.size(),vector<int>(target+1,-1));
         return func(nums.size()-1,target,nums,dp);
 
     }
